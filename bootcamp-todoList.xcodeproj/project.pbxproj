@@ -1,0 +1,311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		019DC1441803238300C509CB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019DC1431803238300C509CB /* UIKit.framework */; };
+		019DC1461803238300C509CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019DC1451803238300C509CB /* Foundation.framework */; };
+		019DC1481803238300C509CB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 019DC1471803238300C509CB /* CoreGraphics.framework */; };
+		019DC14E1803238300C509CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 019DC14C1803238300C509CB /* InfoPlist.strings */; };
+		019DC1501803238300C509CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 019DC14F1803238300C509CB /* main.m */; };
+		019DC1541803238300C509CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 019DC1531803238300C509CB /* AppDelegate.m */; };
+		019DC1561803238300C509CB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 019DC1551803238300C509CB /* Default.png */; };
+		019DC1581803238300C509CB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019DC1571803238300C509CB /* Default@2x.png */; };
+		019DC15A1803238300C509CB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019DC1591803238300C509CB /* Default-568h@2x.png */; };
+		019DC15D1803238300C509CB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019DC15B1803238300C509CB /* MainStoryboard.storyboard */; };
+		019DC1601803238300C509CB /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019DC15F1803238300C509CB /* MasterViewController.m */; };
+		019DC1631803238300C509CB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019DC1621803238300C509CB /* DetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		019DC1401803238300C509CB /* bootcamp-todoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "bootcamp-todoList.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		019DC1431803238300C509CB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		019DC1451803238300C509CB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		019DC1471803238300C509CB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		019DC14B1803238300C509CB /* bootcamp-todoList-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bootcamp-todoList-Info.plist"; sourceTree = "<group>"; };
+		019DC14D1803238300C509CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		019DC14F1803238300C509CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		019DC1511803238300C509CB /* bootcamp-todoList-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "bootcamp-todoList-Prefix.pch"; sourceTree = "<group>"; };
+		019DC1521803238300C509CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		019DC1531803238300C509CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		019DC1551803238300C509CB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		019DC1571803238300C509CB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		019DC1591803238300C509CB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		019DC15C1803238300C509CB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		019DC15E1803238300C509CB /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		019DC15F1803238300C509CB /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		019DC1611803238300C509CB /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		019DC1621803238300C509CB /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		019DC13D1803238300C509CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019DC1441803238300C509CB /* UIKit.framework in Frameworks */,
+				019DC1461803238300C509CB /* Foundation.framework in Frameworks */,
+				019DC1481803238300C509CB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		019DC1371803238300C509CB = {
+			isa = PBXGroup;
+			children = (
+				019DC1491803238300C509CB /* bootcamp-todoList */,
+				019DC1421803238300C509CB /* Frameworks */,
+				019DC1411803238300C509CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		019DC1411803238300C509CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				019DC1401803238300C509CB /* bootcamp-todoList.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		019DC1421803238300C509CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				019DC1431803238300C509CB /* UIKit.framework */,
+				019DC1451803238300C509CB /* Foundation.framework */,
+				019DC1471803238300C509CB /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		019DC1491803238300C509CB /* bootcamp-todoList */ = {
+			isa = PBXGroup;
+			children = (
+				019DC1521803238300C509CB /* AppDelegate.h */,
+				019DC1531803238300C509CB /* AppDelegate.m */,
+				019DC15B1803238300C509CB /* MainStoryboard.storyboard */,
+				019DC15E1803238300C509CB /* MasterViewController.h */,
+				019DC15F1803238300C509CB /* MasterViewController.m */,
+				019DC1611803238300C509CB /* DetailViewController.h */,
+				019DC1621803238300C509CB /* DetailViewController.m */,
+				019DC14A1803238300C509CB /* Supporting Files */,
+			);
+			path = "bootcamp-todoList";
+			sourceTree = "<group>";
+		};
+		019DC14A1803238300C509CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				019DC14B1803238300C509CB /* bootcamp-todoList-Info.plist */,
+				019DC14C1803238300C509CB /* InfoPlist.strings */,
+				019DC14F1803238300C509CB /* main.m */,
+				019DC1511803238300C509CB /* bootcamp-todoList-Prefix.pch */,
+				019DC1551803238300C509CB /* Default.png */,
+				019DC1571803238300C509CB /* Default@2x.png */,
+				019DC1591803238300C509CB /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		019DC13F1803238300C509CB /* bootcamp-todoList */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 019DC1661803238300C509CB /* Build configuration list for PBXNativeTarget "bootcamp-todoList" */;
+			buildPhases = (
+				019DC13C1803238300C509CB /* Sources */,
+				019DC13D1803238300C509CB /* Frameworks */,
+				019DC13E1803238300C509CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "bootcamp-todoList";
+			productName = "bootcamp-todoList";
+			productReference = 019DC1401803238300C509CB /* bootcamp-todoList.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		019DC1381803238300C509CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = KDeal;
+			};
+			buildConfigurationList = 019DC13B1803238300C509CB /* Build configuration list for PBXProject "bootcamp-todoList" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 019DC1371803238300C509CB;
+			productRefGroup = 019DC1411803238300C509CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				019DC13F1803238300C509CB /* bootcamp-todoList */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		019DC13E1803238300C509CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019DC14E1803238300C509CB /* InfoPlist.strings in Resources */,
+				019DC1561803238300C509CB /* Default.png in Resources */,
+				019DC1581803238300C509CB /* Default@2x.png in Resources */,
+				019DC15A1803238300C509CB /* Default-568h@2x.png in Resources */,
+				019DC15D1803238300C509CB /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		019DC13C1803238300C509CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				019DC1501803238300C509CB /* main.m in Sources */,
+				019DC1541803238300C509CB /* AppDelegate.m in Sources */,
+				019DC1601803238300C509CB /* MasterViewController.m in Sources */,
+				019DC1631803238300C509CB /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		019DC14C1803238300C509CB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				019DC14D1803238300C509CB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		019DC15B1803238300C509CB /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				019DC15C1803238300C509CB /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		019DC1641803238300C509CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		019DC1651803238300C509CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		019DC1671803238300C509CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bootcamp-todoList/bootcamp-todoList-Prefix.pch";
+				INFOPLIST_FILE = "bootcamp-todoList/bootcamp-todoList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		019DC1681803238300C509CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "bootcamp-todoList/bootcamp-todoList-Prefix.pch";
+				INFOPLIST_FILE = "bootcamp-todoList/bootcamp-todoList-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		019DC13B1803238300C509CB /* Build configuration list for PBXProject "bootcamp-todoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019DC1641803238300C509CB /* Debug */,
+				019DC1651803238300C509CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		019DC1661803238300C509CB /* Build configuration list for PBXNativeTarget "bootcamp-todoList" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				019DC1671803238300C509CB /* Debug */,
+				019DC1681803238300C509CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 019DC1381803238300C509CB /* Project object */;
+}
