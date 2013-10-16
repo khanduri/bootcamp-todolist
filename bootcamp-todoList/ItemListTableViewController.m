@@ -44,6 +44,7 @@
     [self registerTapGesture];
     
     self.items = [[NSMutableArray alloc] init];
+    
     [self loadItems];
 }
 
@@ -51,14 +52,17 @@
 ///////////// UIGestureRecognizerDelegate
 /////////////////////////////////////////////////////////////////
 
--(void) registerTapGesture{
+-(void) registerTapGesture {
+    
     UITapGestureRecognizer * tapDismiss = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
     tapDismiss.delegate = self;
+    
     [self.tableView addGestureRecognizer:tapDismiss];
 }
 
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    
     if (self.tableView.isEditing) {
         return NO;
     }
@@ -69,11 +73,11 @@
 ///////////// Helpers for saving / loading file
 /////////////////////////////////////////////////////////////////
 
--(NSString *) pathForItemsPlist {
-    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
-    NSString * documents = [paths lastObject];
-    return [documents stringByAppendingPathComponent:@"items.plist"];
-}
+//-(NSString *) pathForItemsPlist {
+//    NSArray * paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+//    NSString * documents = [paths lastObject];
+//    return [documents stringByAppendingPathComponent:@"items.plist"];
+//}
 
 
 -(void) loadItems {
@@ -124,13 +128,11 @@
 ///////////// UITableViewDataSource
 /////////////////////////////////////////////////////////////////
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.items.count;
 }
 
@@ -138,8 +140,7 @@
 ///////////// UITableViewDelegate
 /////////////////////////////////////////////////////////////////
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ItemTableCell *cell = [tableView dequeueReusableCellWithIdentifier:cCellIdentifier forIndexPath:indexPath];
     
     TodoItem * item = [self.items objectAtIndex:indexPath.row];
@@ -164,12 +165,14 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath{
+    
     TodoItem * fromObject = [self.items objectAtIndex:fromIndexPath.row];
     TodoItem * toObject = [self.items objectAtIndex:toIndexPath.row];
+    
     [self.items replaceObjectAtIndex:toIndexPath.row withObject:fromObject];
     [self.items replaceObjectAtIndex:fromIndexPath.row withObject:toObject];
+    
     [self saveItems];
 }
 
@@ -178,6 +181,7 @@
 /////////////////////////////////////////////////////////////////
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    
     if (self.tableView.isEditing) {
         return NO;
     }
@@ -188,12 +192,15 @@
     
     CGPoint point = [textField convertPoint:CGPointZero toView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+    
     TodoItem * item = (TodoItem *)[self.items objectAtIndex:indexPath.row];
     item.text = textField.text;
+    
     [self saveItems];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    
     [textField resignFirstResponder];
     
     [self saveItems];
