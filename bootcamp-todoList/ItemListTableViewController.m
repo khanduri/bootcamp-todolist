@@ -58,6 +58,12 @@
     [self.tableView addGestureRecognizer:tapDismiss];
 }
 
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if (self.tableView.isEditing) {
+        return NO;
+    }
+    return YES;
+}
 /////////////////////////////////////////////////////////////////
 ///////////// Helpers for saving / loading file
 /////////////////////////////////////////////////////////////////
