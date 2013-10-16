@@ -38,14 +38,14 @@
 {
     [super viewDidLoad];
     
+    //self.items = [[NSMutableArray alloc] init];
+    [self loadItems];
+
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addItem:)];
     
     [self registerTapGesture];
     
-    self.items = [[NSMutableArray alloc] init];
-    
-    [self loadItems];
 }
 
 /////////////////////////////////////////////////////////////////
@@ -109,7 +109,7 @@
 - (void)addItem:(id)sender {
     
     TodoItem * item = [[TodoItem alloc] initWithText:@""];
-    [self.items addObject:item];
+    [self.items insertObject:item atIndex:0];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:NO];
@@ -157,6 +157,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self.items removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self saveItems];
     
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         ItemTableCell * insertedRow = (ItemTableCell * )[self.tableView cellForRowAtIndexPath:indexPath];
