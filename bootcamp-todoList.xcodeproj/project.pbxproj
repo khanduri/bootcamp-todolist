@@ -17,8 +17,10 @@
 		019DC1581803238300C509CB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019DC1571803238300C509CB /* Default@2x.png */; };
 		019DC15A1803238300C509CB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 019DC1591803238300C509CB /* Default-568h@2x.png */; };
 		019DC15D1803238300C509CB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 019DC15B1803238300C509CB /* MainStoryboard.storyboard */; };
-		019DC1601803238300C509CB /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019DC15F1803238300C509CB /* MasterViewController.m */; };
-		019DC1631803238300C509CB /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 019DC1621803238300C509CB /* DetailViewController.m */; };
+		01DFE43C1804705000619DA5 /* TodoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFE43B1804705000619DA5 /* TodoItem.m */; };
+		01DFE43F1804732F00619DA5 /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFE43E1804732F00619DA5 /* ItemListTableViewController.m */; };
+		01DFE4431804735F00619DA5 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFE4421804735F00619DA5 /* Constants.m */; };
+		01DFE48D1808EAEE00619DA5 /* ItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFE48C1808EAEE00619DA5 /* ItemTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +38,14 @@
 		019DC1571803238300C509CB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		019DC1591803238300C509CB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		019DC15C1803238300C509CB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		019DC15E1803238300C509CB /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		019DC15F1803238300C509CB /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		019DC1611803238300C509CB /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		019DC1621803238300C509CB /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		01DFE43A1804705000619DA5 /* TodoItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoItem.h; sourceTree = "<group>"; };
+		01DFE43B1804705000619DA5 /* TodoItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoItem.m; sourceTree = "<group>"; };
+		01DFE43D1804732F00619DA5 /* ItemListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemListTableViewController.h; sourceTree = "<group>"; };
+		01DFE43E1804732F00619DA5 /* ItemListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemListTableViewController.m; sourceTree = "<group>"; };
+		01DFE4411804735F00619DA5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		01DFE4421804735F00619DA5 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		01DFE48B1808EAEE00619DA5 /* ItemTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableCell.h; sourceTree = "<group>"; };
+		01DFE48C1808EAEE00619DA5 /* ItemTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +92,12 @@
 		019DC1491803238300C509CB /* bootcamp-todoList */ = {
 			isa = PBXGroup;
 			children = (
-				019DC1521803238300C509CB /* AppDelegate.h */,
-				019DC1531803238300C509CB /* AppDelegate.m */,
+				01DFE48A1808EAC500619DA5 /* View */,
+				01DFE4401804734900619DA5 /* Tools */,
+				01DFE4391804700500619DA5 /* Model */,
+				01DFE43818046FD900619DA5 /* ViewController */,
+				01DFE43718046FCB00619DA5 /* AppDelegate */,
 				019DC15B1803238300C509CB /* MainStoryboard.storyboard */,
-				019DC15E1803238300C509CB /* MasterViewController.h */,
-				019DC15F1803238300C509CB /* MasterViewController.m */,
-				019DC1611803238300C509CB /* DetailViewController.h */,
-				019DC1621803238300C509CB /* DetailViewController.m */,
 				019DC14A1803238300C509CB /* Supporting Files */,
 			);
 			path = "bootcamp-todoList";
@@ -110,6 +115,51 @@
 				019DC1591803238300C509CB /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		01DFE43718046FCB00619DA5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				019DC1521803238300C509CB /* AppDelegate.h */,
+				019DC1531803238300C509CB /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		01DFE43818046FD900619DA5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				01DFE43D1804732F00619DA5 /* ItemListTableViewController.h */,
+				01DFE43E1804732F00619DA5 /* ItemListTableViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		01DFE4391804700500619DA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				01DFE43A1804705000619DA5 /* TodoItem.h */,
+				01DFE43B1804705000619DA5 /* TodoItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		01DFE4401804734900619DA5 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				01DFE4411804735F00619DA5 /* Constants.h */,
+				01DFE4421804735F00619DA5 /* Constants.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		01DFE48A1808EAC500619DA5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				01DFE48B1808EAEE00619DA5 /* ItemTableCell.h */,
+				01DFE48C1808EAEE00619DA5 /* ItemTableCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,10 +228,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01DFE43F1804732F00619DA5 /* ItemListTableViewController.m in Sources */,
 				019DC1501803238300C509CB /* main.m in Sources */,
 				019DC1541803238300C509CB /* AppDelegate.m in Sources */,
-				019DC1601803238300C509CB /* MasterViewController.m in Sources */,
-				019DC1631803238300C509CB /* DetailViewController.m in Sources */,
+				01DFE48D1808EAEE00619DA5 /* ItemTableCell.m in Sources */,
+				01DFE4431804735F00619DA5 /* Constants.m in Sources */,
+				01DFE43C1804705000619DA5 /* TodoItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +356,7 @@
 				019DC1681803238300C509CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

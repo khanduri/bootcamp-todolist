@@ -1,5 +1,5 @@
 //
-//  TodoItem.h
+//  Constants.h
 //  bootcamp-todoList
 //
 //  Created by Prashant Khanduri - Hearsay on 10/8/13.
@@ -8,10 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TodoItem : NSObject <NSCoding>
+@interface Constants : NSObject
 
-@property (nonatomic, strong) NSString * text;
-
-- (TodoItem *) initWithText: (NSString *) text;
+#define cCellIdentifier @"Cell"
 
 @end

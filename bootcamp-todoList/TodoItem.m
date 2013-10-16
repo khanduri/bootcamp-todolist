@@ -10,7 +10,6 @@
 
 @interface TodoItem ()
 
-@property (nonatomic, strong) NSString * itemText;
 @property (nonatomic, strong) NSString * uuid;
 
 @end
@@ -18,25 +17,27 @@
 
 @implementation TodoItem
 
-+ (TodoItem *) createItemWithText: (NSString *) text {
+- (TodoItem *) initWithText: (NSString *) text {
     TodoItem * item = [[TodoItem alloc] init];
 
-    item.itemText = text;
+    item.text = text;
     item.uuid = [[NSUUID UUID] UUIDString];
 
     return item;
 }
+
 
 - (id)initWithCoder:(NSCoder *)decoder {
     self = [super init];
     if (!self) {
         return nil;
     }
-    self.itemText = [decoder decodeObjectForKey:@"itemText"];
+    self.text = [decoder decodeObjectForKey:@"text"];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
-    [encoder encodeObject:self.itemText forKey:@"itemText"];
+    [encoder encodeObject:self.text forKey:@"text"];
 }
+
 @end
