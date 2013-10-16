@@ -64,6 +64,7 @@
     }
     return YES;
 }
+
 /////////////////////////////////////////////////////////////////
 ///////////// Helpers for saving / loading file
 /////////////////////////////////////////////////////////////////
@@ -80,7 +81,7 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]){
         self.items = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
     } else {
-        self.items = [NSMutableArray array];
+        self.items = [[NSMutableArray alloc] init];
     }
 }
 

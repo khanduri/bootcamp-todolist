@@ -21,6 +21,7 @@
 		01DFE43F1804732F00619DA5 /* ItemListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFE43E1804732F00619DA5 /* ItemListTableViewController.m */; };
 		01DFE4431804735F00619DA5 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFE4421804735F00619DA5 /* Constants.m */; };
 		01DFE48D1808EAEE00619DA5 /* ItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01DFE48C1808EAEE00619DA5 /* ItemTableCell.m */; };
+		01DFE4D1180E431C00619DA5 /* items.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01DFE4D0180E431C00619DA5 /* items.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		01DFE4421804735F00619DA5 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		01DFE48B1808EAEE00619DA5 /* ItemTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableCell.h; sourceTree = "<group>"; };
 		01DFE48C1808EAEE00619DA5 /* ItemTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableCell.m; sourceTree = "<group>"; };
+		01DFE4D0180E431C00619DA5 /* items.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = items.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		019DC1491803238300C509CB /* bootcamp-todoList */ = {
 			isa = PBXGroup;
 			children = (
+				01DFE4CF180E430F00619DA5 /* Data */,
 				01DFE48A1808EAC500619DA5 /* View */,
 				01DFE4401804734900619DA5 /* Tools */,
 				01DFE4391804700500619DA5 /* Model */,
@@ -162,6 +165,14 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		01DFE4CF180E430F00619DA5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				01DFE4D0180E431C00619DA5 /* items.plist */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +229,7 @@
 				019DC1581803238300C509CB /* Default@2x.png in Resources */,
 				019DC15A1803238300C509CB /* Default-568h@2x.png in Resources */,
 				019DC15D1803238300C509CB /* MainStoryboard.storyboard in Resources */,
+				01DFE4D1180E431C00619DA5 /* items.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
