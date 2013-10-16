@@ -102,7 +102,7 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:NO];
     
     [self tableView:self.tableView commitEditingStyle:UITableViewCellEditingStyleInsert forRowAtIndexPath:indexPath];
-    
+
     [self saveItems];
 }
 
@@ -135,8 +135,8 @@
     
     TodoItem * item = [self.items objectAtIndex:indexPath.row];
     
-    cell.textField.text = item.text;
     cell.textField.delegate = self;
+    cell.textField.text = item.text;
     
     return cell;
 }
@@ -161,7 +161,6 @@
     TodoItem * toObject = [self.items objectAtIndex:toIndexPath.row];
     [self.items replaceObjectAtIndex:toIndexPath.row withObject:fromObject];
     [self.items replaceObjectAtIndex:fromIndexPath.row withObject:toObject];
-    
     [self saveItems];
 }
 
@@ -169,14 +168,13 @@
 ///////////// UITextFieldDelegate
 /////////////////////////////////////////////////////////////////
 
-- (void)textFieldDidEndEditing:(UITextView *)textView
-{
-    CGPoint hitPoint = [textView convertPoint:CGPointZero toView:self.tableView];
-    NSIndexPath *index = [self.tableView indexPathForRowAtPoint:hitPoint];
-    self.items[index.row] = textView.text;
-    
-    [self saveItems];
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    if (self.tableView.isEditing) {
+        return NO;
+    }
+    return YES;
 }
+
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
