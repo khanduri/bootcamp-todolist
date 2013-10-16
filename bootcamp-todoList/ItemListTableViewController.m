@@ -77,17 +77,25 @@
 
 
 -(void) loadItems {
-    NSString * filePath = [self pathForItemsPlist];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]){
-        self.items = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
-    } else {
+//    NSString * filePath = [self pathForItemsPlist];
+//    if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]){
+//        self.items = [NSKeyedUnarchiver unarchiveObjectWithFile:filePath];
+//    } else {
+//        self.items = [[NSMutableArray alloc] init];
+//    }
+    NSData *serialized = [[NSUserDefaults standardUserDefaults] objectForKey:@"items"];
+    self.items = [NSKeyedUnarchiver unarchiveObjectWithData:serialized];
+    if (nil == self.items){
         self.items = [[NSMutableArray alloc] init];
     }
 }
 
 -(void)saveItems{
-    NSString * filePath = [self pathForItemsPlist];
-    [NSKeyedArchiver archiveRootObject:self.items toFile:filePath];
+    NSData *serialized = [NSKeyedArchiver archivedDataWithRootObject:self.items];
+    [[NSUserDefaults standardUserDefaults] setObject:serialized forKey:@"items"];
+    
+//    NSString * filePath = [self pathForItemsPlist];
+//    [NSKeyedArchiver archiveRootObject:self.items toFile:filePath];
 }
 
 /////////////////////////////////////////////////////////////////
@@ -176,6 +184,14 @@
     return YES;
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    CGPoint point = [textField convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+    TodoItem * item = (TodoItem *)[self.items objectAtIndex:indexPath.row];
+    item.text = textField.text;
+    [self saveItems];
+}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
